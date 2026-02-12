@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+* {
+    font-family: sans-serif;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@utility centerChild {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@utility globeWrapper {
+  width: 6rem;
+  aspect-ratio: 1;
+}
+
+@utility globe {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-image: url('/earth.jpg');
+  background-repeat: repeat-x;
+  background-size: 10rem auto;
+  box-shadow: inset 0 0 1rem #888, 0 0 1rem #888;
+  animation: globeAnim 10s linear infinite;
+}
+
+@keyframes globeAnim {
+  from {
+    background-position: 0 center;
+  }
+  to {
+    background-position: 1000% center;
+  }
+}
