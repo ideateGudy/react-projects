@@ -48,7 +48,7 @@ const App = () => {
           className={`bx text-lg lg:text-xl ${darkMode ? "bx-sun" : "bx-moon"}`}
         ></i>
       </button>
-      <Hero />
+      <Hero darkMode={darkMode} />
     </div>
   );
 };
