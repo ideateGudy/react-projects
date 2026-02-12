@@ -1,4 +1,3 @@
-import { useState } from "react";
 import SignInSignUp from "./components/SignInSignUp";
 
 const App = () => {
