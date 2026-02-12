@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Hero from "./components/Hero";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     const theme = localStorage.getItem("theme");
-    return theme === "dark";
+    if (theme) {
+      return theme === "dark";
+    }else {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
   });
 
   useEffect(() => {
